@@ -48,7 +48,7 @@
 &kp Q             &kp W           &kp E         &kp R        &kp T                                          &kp Y        &kp U  &kp I      &kp O       &kp P
 &kp A             &kp S           &kp D         &kp F        &kp G                                          &kp H        &kp J  &kp K      &kp L       &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X           &kp C         &kp V        &kp B                                          &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp LCTRL         &kp LEFT_SHIFT  &kp LEFT_ALT  &lt 3 LANG2  &lt 1 SPACE  &lt 2 LANG1      &lt 2 BACKSPACE  &lt 3 ENTER                                &mt RCTRL ESCAPE
+&kp LCTRL         &kp LEFT_SHIFT  &kp LEFT_ALT  &lt 1 LANG2  &lt 1 SPACE  &lt 7 LANG1      &lt 2 BACKSPACE  &lt 3 ENTER                                &mt RCTRL ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -56,26 +56,26 @@
 
         NUM_Func {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &kp NUMBER_6    &kp N7                &kp N8                 &kp NUMBER_9  &kp GREATER_THAN
-&trans        &kp F2        &kp F3        &kp F4        &kp F4                          &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI      &kp COLON
-&trans        &kp F7        &kp F8        &kp F9        &kp F10                         &kp PIPE        &kp LBKT              &kp RBKT               &kp SQT       &kp DOUBLE_QUOTES
-&trans        &trans        &trans        &trans        &trans   &trans      &kp COMMA  &kp PERIOD                                                                 &kp ESC
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                           &kp NUMBER_6   &kp N7          &kp N8          &kp NUMBER_9     &kp NUMBER_0
+&trans        &kp F2        &kp F3        &kp F4        &kp F4                           &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &kp MINUS
+&trans        &kp F7        &kp F8        &kp F9        &kp F10                          &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans        &trans        &trans        &trans        &trans   &trans      &kp DELETE  &trans                                                          &trans
             >;
         };
 
         NUM {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12                      &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
-&trans  &kp F5  &kp F6   &kp F7   &kp F8                       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK     &kp SLASH
-&trans  &kp F1  &kp F2   &kp F3   &kp F4                       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE  &kp COLON
-&trans  &trans  &trans   &trans   &trans   &trans      &trans  &kp NUMBER_0                                               &kp PERIOD
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                     &kp LC(W)          &kp LC(R)           &kp LC(T)           &kp LC(LS(T))        &trans
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)                     &kp LC(PAGE_UP)    &kp LC(HOME)        &kp LA(UP_ARROW)    &kp LC(END)          &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                     &kp LC(PAGE_DOWN)  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &trans
+&trans     &trans     &trans     &trans     &trans     &mo 6      &trans  &trans                                                                          &kp PRINTSCREEN
             >;
         };
 
         ARROW {
             bindings = <
 &kp TAB                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS                                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F10         &kp RIGHT_ALT    &kp TAB
-&kp ASTERISK                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS                                &kp LS(PAGE_UP)       &kp HOME               &kp UP_ARROW    &kp C_REWIND     &kp COLON
+&kp ASTERISK                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS                                &kp LS(PAGE_UP)       &kp HOME               &kp UP_ARROW    &kp END          &kp COLON
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT                                  &kp PAGE_DOWN         &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp KP_SLASH
 &trans                      &trans           &trans           &kp LEFT_ALT     &trans        &kp LEFT_WIN      &kp DELETE  &trans                                                                        &trans
             >;
@@ -103,10 +103,19 @@
 
         CONFIG {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &bootloader  &trans  &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans                               &trans
+&bootloader  &trans  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans       &trans  &trans  &trans  &trans                      &trans        &trans          &trans        &trans        &kp LG(LS(RIGHT))
+&trans       &trans  &trans  &trans  &trans                      &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &kp LS(LG(LEFT_ARROW))
+&trans       &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                    &trans
+            >;
+        };
+
+        SIMBOL {
+            bindings = <
+&kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
+&kp BSPC      &trans      &trans         &trans        &kp GRAVE                          &kp LBKT       &kp RBKT      &kp BSLH      &kp LS(DQT)   &kp SQT
+&trans        &trans      &trans         &trans        &kp LS(TILDE)                      &kp LBKT       &kp RBKT      &kp LS(PIPE)  &kp LS(PLUS)  &kp EQUAL
+&trans        &trans      &trans         &trans        &trans         &trans      &trans  &trans                                                   &trans
             >;
         };
     };
