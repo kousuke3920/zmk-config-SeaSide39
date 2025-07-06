@@ -8,12 +8,14 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";
+    #flavor = "balanced";
+    flavor = "hold-preferred";
     quick-tap-ms = <300>;
 };
 
 &lt {
-    flavor = "balanced";
+    #flavor = "balanced";
+    flavor = "hold-preferred";
     quick-tap-ms = <300>;
 };
 
@@ -36,6 +38,8 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <300>;
             tapping-term-ms = <200>;
         };
     };
