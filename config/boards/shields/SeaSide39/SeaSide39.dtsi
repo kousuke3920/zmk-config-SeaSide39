@@ -78,7 +78,7 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        wakeup-source;
+        # wakeup-source; # deep sleep から復帰させるための設定。
         diode-direction = "col2row";
 
         row-gpios
