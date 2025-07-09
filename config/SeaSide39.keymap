@@ -8,15 +8,17 @@
 #define NUM 6
 
 &mt {
-    #flavor = "balanced";
-    flavor = "hold-preferred";
+    flavor = "balanced";
+    #flavor = "hold-preferred";
     quick-tap-ms = <300>;
+    tapping-term-ms = <200>;
 };
 
 &lt {
-    #flavor = "balanced";
-    flavor = "hold-preferred";
+    flavor = "balanced";
+    #lavor = "hold-preferred";
     quick-tap-ms = <300>;
+    tapping-term-ms = <200>;
 };
 
 / {
