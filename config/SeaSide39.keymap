@@ -142,10 +142,10 @@
 
         FUNCTION {
             bindings = <
-&kp N1          &kp N2   &kp N3   &kp N4  &kp N5                       &kp N6            &kp N7             &kp N8         &kp N9      &kp N0
-&trans          &kp F2   &kp F3   &kp F4  &kp F5                       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp SEMI    &kp MINUS
-&kp LEFT_SHIFT  &kp F7   &kp F8   &kp F9  &kp F10                      &kp GRAVE         &trans             &kp COMMA      &kp PERIOD  &kp SLASH
-&trans          &kp F11  &kp F12  &trans  &trans   &trans      &trans  &trans                                                          &kp EQUAL
+&trans          &trans   &trans   &trans  &trans                       &trans         &trans          &trans          &trans           &trans
+&trans          &kp F2   &kp F3   &kp F4  &kp F5                       &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &kp MINUS
+&kp LEFT_SHIFT  &kp F7   &kp F8   &kp F9  &kp F10                      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans          &kp F11  &kp F12  &trans  &trans   &trans      &trans  &trans                                                          &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -178,12 +178,12 @@
             >;
         };
 
-        layer_7 {
+        Signature {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6     &kp N7    &kp N8     &kp N9    &kp N0
+&trans  &trans  &trans  &trans  &trans                      &kp LBKT   &kp RBKT  &kp BSLH   &kp SEMI  &kp MINUS
+&trans  &trans  &trans  &trans  &trans                      &kp GRAVE  &kp APOS  &kp COMMA  &kp DOT   &kp FSLH
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                    &kp EQUAL
             >;
         };
     };
