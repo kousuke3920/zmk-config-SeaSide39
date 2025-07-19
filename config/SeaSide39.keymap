@@ -101,8 +101,6 @@
         ht_shft_mb3: hold_tap_shift_mb3 {
             compatible = "zmk,behavior-hold-tap";
             label = "MKP_HOLD";
-            bindings = <&kp>, <&mkp>;
-
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RIGHT_SHIFT>, <&mkp MB3>;
