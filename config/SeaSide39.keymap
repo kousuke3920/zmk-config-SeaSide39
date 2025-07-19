@@ -98,7 +98,7 @@
             bindings = <&kp Z>, <&kp LSHFT>;
         };
 
-        ht_shft_mb3: hold_tap_shipf_mb3 {
+        ht_shft_mb3: hold_tap_shift_mb3 {
             compatible = "zmk,behavior-hold-tap";
             label = "MKP_HOLD";
             bindings = <&kp>, <&mkp>;
