@@ -103,7 +103,9 @@
             label = "MKP_HOLD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RIGHT_SHIFT>, <&mkp MB3>;
+            bindings = <&kp>, <&mkp>;
+
+            hold-trigger-key-positions = <29>;
         };
     };
 
