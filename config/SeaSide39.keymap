@@ -57,6 +57,11 @@
             bindings = <&mo 5>;
             key-positions = <13 14>;
         };
+
+        mb3_combo {
+            bindings = <&mkp MB3>;
+            key-positions = <28 27>;
+        };
     };
 
     macros {
@@ -97,16 +102,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp Z>, <&kp LSHFT>;
         };
-
-        ht_shft_mb3: hold_tap_shift_mb3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKP_HOLD";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&mkp>;
-
-            hold-trigger-key-positions = <29>;
-        };
     };
 
     keymap {
@@ -116,8 +111,8 @@
             bindings = <
 &kp Q                      &kp W         &kp E         &kp R             &kp T                                                     &kp Y        &kp U  &kp I     &kp O     &kp P
 &kp A                      &kp S         &kp D         &kp F             &kp G                                                     &kp H        &kp J  &kp K     &kp L     &mo 5
-&mt_balanced LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B                                                     &kp N        &kp M  &mkp MB1  &mkp MB2  &ht_shft_mb3 RIGHT_SHIFT MB3
-&kp RCTRL                  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_to_layer_0 4 SPACE  &lt 5 LANG1      &lt 2 BACKSPACE  &lt 1 ENTER                             &mt RCTRL ESCAPE
+&mt_balanced LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B                                                     &kp N        &kp M  &mkp MB1  &mkp MB2  &kp RIGHT_SHIFT
+&kp RCTRL                  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_to_layer_0 4 SPACE  &lt 7 LANG1      &lt 2 BACKSPACE  &lt 1 ENTER                             &mt RCTRL ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -154,10 +149,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans    &trans    &trans                        &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &mkp MB2  &mkp MB1  &mo 5                         &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mo 5
-&trans  &trans  &trans    &trans    &mkp MB3                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans    &trans    &trans    &trans      &trans  &trans                                &trans
+&trans  &trans  &trans    &trans    &trans                        &trans             &trans        &trans              &trans         &trans
+&trans  &trans  &mkp MB2  &mkp MB1  &mo 5                         &kp LC(PAGE_UP)    &kp LC(HOME)  &kp LA(UP_ARROW)    &kp LC(END)    &trans
+&trans  &trans  &trans    &trans    &mkp MB3                      &kp LC(PAGE_DOWN)  &kp LA(LEFT)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT)  &trans
+&trans  &trans  &trans    &trans    &trans    &trans      &trans  &trans                                                              &trans
             >;
         };
 
