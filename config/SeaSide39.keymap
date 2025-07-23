@@ -57,6 +57,11 @@
             bindings = <&mo 5>;
             key-positions = <13 14>;
         };
+
+        MB3_RIGHT {
+            bindings = <&mkp MB3>;
+            key-positions = <17 18>;
+        };
     };
 
     macros {
@@ -97,6 +102,17 @@
             tapping-term-ms = <200>;
             bindings = <&kp Z>, <&kp LSHFT>;
         };
+
+        lt_balanced: lt_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BALANCED";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -104,10 +120,10 @@
 
         default_layer {
             bindings = <
-&kp Q                      &kp W         &kp E         &kp R             &kp T                                          &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A                      &kp S         &kp D         &kp F             &kp G                                          &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt_balanced Z LEFT_SHIFT  &kp X         &kp C         &kp V             &kp B                                          &kp N        &kp M  &kp COMMA  &kp DOT  &mt_balanced RIGHT_SHIFT SLASH
-&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt 2 SPACE  &lt 5 LANG1      &lt 2 BACKSPACE  &lt 1 ENTER                             &lt 7 ESCAPE
+&kp Q                      &kp W         &kp E         &kp R             &kp T                                                   &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A                      &kp S         &kp D         &kp F             &kp G                                                   &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt_balanced Z LEFT_SHIFT  &kp X         &kp C         &kp V             &kp B                                                   &kp N        &kp M  &kp COMMA  &kp DOT  &mt_balanced RIGHT_SHIFT SLASH
+&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1      &lt 2 BACKSPACE  &lt 1 ENTER                             &lt 7 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -181,8 +197,8 @@
         MOUSE_LEFT {
             bindings = <
 &kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                      &kp LC(Y)  &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
-&kp LC(A)  &kp LC(S)  &mkp MB2   &mkp MB1   &mo 5                          &kp LC(H)  &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mkp MB3                       &kp LC(N)  &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)
+&kp LC(A)  &kp LC(S)  &mkp MB2   &mkp MB1   &mkp MB3                       &kp LC(H)  &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                      &kp LC(N)  &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)
 &kp LCTRL  &trans     &trans     &trans     &trans     &trans      &trans  &trans                                            &kp RCTRL
             >;
         };
