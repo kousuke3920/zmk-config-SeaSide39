@@ -110,7 +110,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             quick-tap-ms = <200>;
         };
     };
@@ -140,19 +140,19 @@
 
         ARROW_SIGN {
             bindings = <
-&kp LS(EXCL)   &kp LS(AT)          &kp LS(POUND)    &kp LS(DLLR)                 &kp LS(PRCNT)                                      &kp LC(W)          &kp LC(R)     &kp LC(T)         &kp LC(LS(T))  &mt PLUS EQUAL
-&kp LS(CARET)  &kp LS(AMPS)        &kp LS(STAR)     &kp LS(LPAR)                 &kp LS(RPAR)                                       &kp LC(PAGE_UP)    &kp LC(HOME)  &kp LA(UP_ARROW)  &kp LC(END)    &mt UNDER MINUS
-&trans         &mt PIPE BACKSLASH  &mt TILDE GRAVE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET                      &kp LC(PAGE_DOWN)  &kp LA(LEFT)  &kp LA(DOWN)      &kp LA(RIGHT)  &mt DOUBLE_QUOTES SINGLE_QUOTE
-&trans         &trans              &trans           &trans                       &trans                         &trans      &trans  &trans                                                            &kp LG(L)
+&kp LS(EXCL)   &kp LS(AT)          &kp LS(POUND)    &kp LS(DLLR)                 &kp LS(PRCNT)                                          &kp LC(W)          &kp LC(R)     &kp LC(T)         &kp LC(LS(T))  &mt PLUS EQUAL
+&kp LS(CARET)  &kp LS(AMPS)        &kp LS(STAR)     &kp LS(LPAR)                 &kp LS(RPAR)                                           &kp LC(PAGE_UP)    &kp LC(HOME)  &kp LA(UP_ARROW)  &kp LC(END)    &mt UNDER MINUS
+&trans         &mt PIPE BACKSLASH  &mt TILDE GRAVE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET                          &kp LC(PAGE_DOWN)  &kp LA(LEFT)  &kp LA(DOWN)      &kp LA(RIGHT)  &mt DOUBLE_QUOTES SINGLE_QUOTE
+&trans         &trans              &trans           &trans                       &trans                         &trans      &kp DELETE  &trans                                                            &kp LG(L)
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &trans         &trans    &trans        &trans     &trans
-&trans  &kp F2  &kp F3  &kp F4  &kp F5                       &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp MINUS
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                      &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans   &trans      &trans  &trans                                            &trans
+&trans  &trans  &trans  &trans  &trans                           &trans         &trans    &trans        &trans     &trans
+&trans  &kp F2  &kp F3  &kp F4  &kp F5                           &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp MINUS
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                          &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans   &trans      &kp DELETE  &trans                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
