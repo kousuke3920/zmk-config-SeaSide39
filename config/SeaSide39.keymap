@@ -118,7 +118,7 @@
 &kp Q                      &kp W         &kp E         &kp R             &kp T                                                   &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A                      &kp S         &kp D         &kp F             &kp G                                                   &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt_balanced LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B                                                   &kp N        &kp M  &kp COMMA  &kp DOT  &mt_balanced RIGHT_SHIFT SLASH
-&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1      &lt 2 BACKSPACE  &lt 1 ENTER                             &lt 7 ESCAPE
+&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1      &lt 2 BACKSPACE  &lt 1 ENTER                             &mo 7
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -129,7 +129,7 @@
 &kp TAB                     &kp N7  &kp N8        &kp N9        &mt ASTERISK EQUAL                                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F10       &kp RIGHT_ALT  &kp TAB
 &trans                      &kp N4  &kp N5        &kp N6        &mt PLUS MINUS                                    &kp PAGE_UP           &kp HOME               &kp UP_ARROW  &kp END        &kp COLON
 &mt_balanced LEFT_SHIFT N0  &kp N1  &kp NUMBER_2  &kp NUMBER_3  &mt COMMA DOT                                     &kp PAGE_DOWN         &kp LEFT_ARROW         &kp DOWN      &kp RIGHT      &mt RIGHT_SHIFT SLASH
-&trans                      &trans  &trans        &kp LEFT_ALT  &trans              &kp LEFT_GUI      &kp DELETE  &trans                                                                    &trans
+&trans                      &trans  &trans        &kp LEFT_ALT  &trans              &kp LEFT_GUI      &kp DELETE  &trans                                                                    &kp ESCAPE
             >;
         };
 
@@ -191,10 +191,10 @@
 
         MOUSE_LEFT {
             bindings = <
-&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                            &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
-&kp LC(A)  &kp LC(S)  &mkp MB2   &mkp MB1   &mkp MB3                             &kp LC(H)      &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                            &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &mt RIGHT_SHIFT LC(SLASH)
-&kp LCTRL  &trans     &trans     &mkp MB2   &mkp MB1   &mkp MB3      &kp DELETE  &kp LC(ENTER)                                         &kp RCTRL
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                              &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
+&kp LC(A)  &kp LC(S)  &mkp MB2   &mkp MB1   &mkp MB3                               &kp LC(H)      &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                              &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &mt RIGHT_SHIFT LC(SLASH)
+&kp LCTRL  &trans     &trans     &trans     &kp LC(SPACE)  &trans      &kp DELETE  &kp LC(ENTER)                                         &kp RCTRL
             >;
         };
     };
