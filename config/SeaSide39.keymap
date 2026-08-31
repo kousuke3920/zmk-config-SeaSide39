@@ -164,10 +164,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &kp LA(F4)  &kp LA(LC(F5))                                &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans                                        &trans  &trans  &trans  &trans  &kp LG(LC(LEFT_ARROW))
-&trans  &trans  &trans  &trans      &kp LS(LG(RIGHT))                             &trans  &trans  &trans  &trans  &kp LG(LC(RIGHT))
-&trans  &trans  &trans  &trans      &trans             &trans      &kp BACKSPACE  &trans                          &kp PRINTSCREEN
+&trans                &trans                &trans                &kp LA(F4)            &kp LA(LC(F5))                                     &trans  &trans  &trans  &trans  &trans
+&kp LS(LG(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(UP_ARROW))                               &trans  &trans  &trans  &trans  &kp LG(LC(LEFT_ARROW))
+&trans                &trans                &trans                &trans                &kp LS(LG(DOWN_ARROW))                             &trans  &trans  &trans  &trans  &kp LG(LC(RIGHT))
+&trans                &trans                &trans                &trans                &trans                  &trans      &kp BACKSPACE  &trans                          &kp PRINTSCREEN
             >;
         };
 
